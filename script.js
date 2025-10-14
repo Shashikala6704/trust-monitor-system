@@ -3,11 +3,8 @@
  * Handles form interactions, API calls, and UI animations
  */
 
-// API Configuration - Auto-detect if running locally, otherwise use Render backend
-const API_BASE_URL =
-    window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-        ? 'http://localhost:5000'
-        : 'https://fakeaccdetector.onrender.com';
+// API Configuration is now pointed to your live Render backend
+const API_BASE_URL = 'https://trust-monitor-system.onrender.com';
 
 
 // DOM Elements
@@ -50,7 +47,7 @@ async function checkAPIHealth() {
         }
     } catch (error) {
         console.warn('API is not running. Please start the backend server.');
-        showNotification('Please start the backend server (python api.py)', 'warning');
+        showNotification('API connection failed. Please try again later.', 'warning');
     }
 }
 
@@ -181,9 +178,6 @@ async function analyzeAccount(data) {
     showLoading();
     hideResults();
     
-    // *** THIS IS THE ONLY LINE I ADDED FOR DEBUGGING ***
-    console.log('Sending this data to the backend:', data);
-
     try {
         const response = await fetch(`${API_BASE_URL}/predict`, {
             method: 'POST',
