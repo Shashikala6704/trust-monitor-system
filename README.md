@@ -97,6 +97,3 @@ Pull requests are welcome! For major changes, open an issue first.
 
 Specify your license here (MIT / Apache / etc.).
 
----
-
-If you want, I can generate a **live HTML+JS UI update**, a **refactored FastAPI backend version**, or a **deployment plan** (e.g., container + serverless) to make this production-ready — just say the word.
