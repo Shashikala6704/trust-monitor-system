@@ -1,6 +1,4 @@
 
-
-````markdown
 # Trust Monitor System
 
 An AI-powered system to detect and monitor trustworthiness of accounts using ML models and a web-based UI.
