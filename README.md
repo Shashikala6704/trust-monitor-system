@@ -1,5 +1,4 @@
 
----
 
 ````markdown
 # Trust Monitor System
